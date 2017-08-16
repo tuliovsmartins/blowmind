@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	<th:block th:fragment="loginModal">
+		<div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+	          <div class="modal-content">
+	            <div class="modal-header shadow-2dp no-pb">
+	              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                <span aria-hidden="true">
+	                  <i class="zmdi zmdi-close"></i>
+	                </span>
+	              </button>
+	              <div class="modal-title text-center">
+	                <h1 class="name-left">Blo
+						<div class="ms-logo-l animated zoomInDown animation-delay-5">WM</div> 
+						<span class="name-right">ind</span>
+					</h1>
+	              </div>
+	              <div class="modal-header-tabs">
+	                <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+	                  <li role="presentation" class="active">
+	                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="withoutripple">
+	                      <i class="zmdi zmdi-account"></i> Login</a>
+	                  </li>
+	                  <li role="presentation">
+	                    <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="withoutripple">
+	                      <i class="zmdi zmdi-key"></i> Esqueci a senha</a>
+	                  </li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="modal-body">
+	              <div class="tab-content">
+	                <div role="tabpanel" class="tab-pane fade active in" id="ms-login-tab">
+	                  <form id="login" name="login" th:action="@{/login}" method="POST">
+	                    <fieldset>
+	                      <div th:if="${param.error}">
+           					<li><span style="color:#FF1493; float:left;" th:text="#{labels.menu.errormessage}"></span></li>
+        				  </div>
+	                      <div class="form-group label-floating">
+	                        <div class="input-group">
+	                          <span class="input-group-addon">
+	                            <i class="zmdi zmdi-account"></i>
+	                          </span>
+	                          <label class="control-label" for="ms-form-user">Usuário (e-mail)</label>
+	                          <input type="text" id="login" class="form-control" name="username"/> </div>
+	                      </div>
+	                      <div class="form-group label-floating">
+	                        <div class="input-group">
+	                          <span class="input-group-addon">
+	                            <i class="zmdi zmdi-lock"></i>
+	                          </span>
+	                          <label class="control-label" for="ms-form-pass">Senha</label>
+	                          <input type="password" id="login" class="form-control" name="password"/> </div>
+	                      </div>
+	                      <div class="row mt-2">
+	                        <div class="col-md-6">
+	                          <div class="form-group no-mt">
+	                            <div class="checkbox">
+	                              <label>
+	                                <input type="checkbox" id="remember-me" name="remember-me"/> Manter conectado </label>
+	                            </div>
+	                          </div>
+	                        </div>
+	                        <div class="col-md-6">
+	                          <button class="btn btn-raised btn-primary pull-right" type="submit">Entrar</button>
+	                        </div>
+	                      </div>
+	                    </fieldset>
+	                  </form>
+	                </div>
+	                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+	                  <fieldset>
+	                    <div class="form-group label-floating">
+	                      	<div class="input-group">
+	                        	<span class="input-group-addon">
+	                          		<i class="zmdi zmdi-email"></i>
+	                        	</span>
+	                        	<label class="control-label" for="ms-form-email">Usuário (e-mail)</label>
+	                        	<input type="email" id="ms-form-email" class="form-control"/> 
+	                       </div>
+	                    </div>
+	                    <button class="btn btn-raised btn-block btn-primary">Trocar senha</button>
+	                  </fieldset>
+	                 </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+      </th:block>
+  </html>
+      

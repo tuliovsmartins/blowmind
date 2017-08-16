@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#333"/>
+	     <title>BloWMind</title>
+    <meta name="description" content="BloWMind Web Makers"/>
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled=""/>
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+    <div id="ms-preload" class="ms-preload">
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+      <!-- Modal login-->
+      <th:block th:replace="/default/loginModal :: loginModal"/>
+      <!-- header -->
+      <th:block th:replace="/default/header :: header"/>
+ 	  <!-- header -->
+      <th:block th:replace="/default/menu :: menu"/>
+          
+      <div class="ms-hero ms-hero-material">
+        <span class="ms-hero-bg"></span>
+        <div class="container">
+          <div class="col-lg-6 col-md-7">
+            <div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <div class="carousel-caption">
+                    <div class="ms-hero-material-text-container">
+                      <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
+                        <h1 class="animated fadeInLeft animation-delay-15 font-smoothing">O
+                          <strong>novo conceito</strong> de desenvolvimento distribuído</h1>
+                        <h2 class="animated fadeInLeft animation-delay-18">A melhor abordagem para
+                          <span class="color-warning">desenvolvimento ágil</span> com alta qualidade.</h2>
+                      </header> 
+                      <ul class="ms-hero-material-list">
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-18">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-warning shadow-3dp">
+                              <i class="zmdi zmdi-airplane"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text color-info animated fadeInRight animation-delay-19">Utilizando metodologias ágeis de desenvolvimento como scrum e xp, garantimos o desenvolvimento do projeto em tempo hábil</div>
+                        </li>
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-20">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-success shadow-3dp">
+                              <i class="zmdi zmdi-bike"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-21">Repositorios de conhecimento que podem ser reutilizados pelos recursos em várias fazes do projeto.</div>
+                        </li>
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-22">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-danger shadow-3dp">
+                              <i class="glyphicon glyphicon-flash"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-23">Curtos períodos de iteração, garantindo o valor e tranquilidade sobre o produto.</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- ms-hero-material-text-container -->
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption">
+                    <div class="ms-hero-material-text-container">
+                      <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
+                        <h1 class="animated fadeInLeft animation-delay-15">Conhecimento distribuído
+                          <strong>globalizado</strong> e seguro</h1>
+                        <h2 class="animated fadeInLeft animation-delay-18">Experiencia incontestável
+                          <span class="color-warning">de desenvolvedores</span> em vários lugares.</h2>
+                      </header>
+                      <ul class="ms-hero-material-list">
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-18">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-info shadow-3dp">
+                              <i class="glyphicon glyphicon-education"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-19">Contamos com recursos distribuídos, de forma a contar com diversos níveis de experiencia e conhecimento.</div>
+                        </li>
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-20">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-royal shadow-3dp">
+                              <i class="glyphicon glyphicon-usd"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-21">Menores custos de desenvolvimento, recursos e infra-estrutura .</div>
+                        </li>
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-22">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-warning shadow-3dp">
+                              <i class="glyphicon glyphicon-pushpin"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-23">Maior acertividade no entendimento de demandas, melhor entendimento e maior desempenho.</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- ms-hero-material-text-container -->
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption"> 
+                    <div class="ms-hero-material-text-container">
+                      <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
+                        <h1 class="animated fadeInLeft animation-delay-15">Gerenciamento claro
+                          <strong>em tempo real</strong> em um só lugar.</h1>
+                        <h2 class="animated fadeInLeft animation-delay-18">Indicadores de desempenho em tempo real para
+                          <span class="color-warning">gerenciamento perfeito</span>.</h2>
+                      </header>
+                      <ul class="ms-hero-material-list">
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-18">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-danger shadow-3dp">
+                              <i class="glyphicon glyphicon-dashboard"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-19">Acompanhamento passo a passo das fazes de desenvolvimento, da especificação a entrega.</div>
+                        </li>
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-20">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-info shadow-3dp">
+                              <i class="glyphicon glyphicon-log-in"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-21">Gerenciamento transparente, entregas sólidas e confiáveis com baixos níveis de manutenção.</div>
+                        </li>
+                        <li class="">
+                          <div class="ms-list-icon animated zoomInUp animation-delay-22">
+                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-success shadow-3dp">
+                              <i class="zmdi zmdi-compass"></i>
+                            </span>
+                          </div>
+                          <div class="ms-list-text animated fadeInRight animation-delay-23">Testes direcionádos, garantia de aderencia e valorização do produto para atingir o objetivo.</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- ms-hero-material-text-container -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-5">
+            <div class="ms-hero-img animated zoomInUp animation-delay-30">
+              <img src="assets/img/demo/mock-imac-material2.png" alt="" class="img-responsive">
+              <div id="carousel-hero-img" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators carousel-indicators-hero-img">
+                  <li data-target="#carousel-hero-img" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-hero-img" data-slide-to="1"></li>
+                  <li data-target="#carousel-hero-img" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+	                <div class="ms-hero-img-slider item active">
+	                    <img src="assets/img/page/Project-Management-Knowledge-Areas.png" alt="" class="img-responsive"></img> 
+	                </div>
+	                <div class="ms-hero-img-slider item">
+	                    <img src="assets/img/page/team.jpg" alt="" class="img-responsive"></img>
+	                </div>
+	                <div class="ms-hero-img-slider item">
+	                    <img src="assets/img/page/charts.png" alt="" class="img-responsive"></img>
+	                </div>
+                </div>
+              </div>
+            </img>
+          </div>
+        </div>
+        
+        <!-- container -->
+      </div>
+      <!-- ms-hero ms-hero-black -->
+      <div class="container mt-4">
+        <h2 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">Conheça nossas soluções</h2>
+        <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4"> Soluções criadas especialmente para,
+          <span class="text-danger">o seu negócio</span> com qualidade, escalabilidade, rapides e foco no negócio.</p>
+        <div class="ms-feature col-lg-3 col-md-6 col-sm-6 card wow flipInX animation-delay-4">
+          <div class="text-center card-block">
+            <span class="ms-icon ms-icon-circle ms-icon-xxlg color-info">
+              <i class="glyphicon glyphicon-retweet"></i>
+            </span>
+            <h4 class="color-info">OTRS</h4>
+            <p class="color-info">O software OTRS IT Service Management é um poderoso conjunto de ferramentas para o gerenciamento de processos.</p>
+            <a href="javascript:void(0)" class="btn btn-info btn-raised">Saiba mais...</a>
+          </div>
+        </div>
+        <div class="ms-feature col-lg-3 col-md-6 col-sm-6 card wow flipInX animation-delay-8">
+          <div class="text-center card-block">
+            <span class="ms-icon ms-icon-circle ms-icon-xxlg color-warning">
+              <i class="glyphicon glyphicon-phone"></i>
+            </span>
+            <h4 class="color-warning">Mobile App</h4>
+            <p class="color-info">Coloque suas soluções nas mãos dos seus clientes com uma aplicação mobile exclusiva.</p>
+            <a href="javascript:void(0)" class="btn btn-warning btn-raised">Saiba mais...</a>
+          </div>
+        </div>
+        <div class="ms-feature col-lg-3 col-md-6 col-sm-6 card wow flipInX animation-delay-10">
+          <div class="text-center card-block">
+            <span class="ms-icon ms-icon-circle ms-icon-xxlg color-success">
+              <i class="glyphicon glyphicon-blackboard"></i>
+            </span>
+            <h4 class="color-success">Software house</h4>
+            <p class="color-info">Crie um aplicativo web com tudo que você precisa, para ter o controle completo de sua empresa.</p>
+            <a href="javascript:void(0)" class="btn btn-success btn-raised">Saiba mais...</a>
+          </div>
+        </div>
+        <div class="ms-feature col-lg-3 col-md-6 col-sm-6 card wow flipInX animation-delay-6">
+          <div class="text-center card-block">
+            <span class="ms-icon ms-icon-circle ms-icon-xxlg  color-danger">
+              <i class="glyphicon glyphicon-eye-open"></i>
+            </span>
+            <h4 class="color-danger">Machine learn</h4>
+            <p class="color-info">Deixe que a tecnologia faça o trabalho, aprendendo como agregar valor a seu negócio através de experiência própria.</p>
+            <a href="javascript:void(0)" class="btn btn-danger btn-raised">Saiba mais...</a>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+      <div class="wrap wrap-mountain mt-6">
+        <div class="container">
+          <h2 class="text-center text-light mb-6 wow fadeInDown animation-delay-5">Material Design is a
+            <strong>new way</strong> to create designs</h2>
+          <div class="row">
+            <div class="col-md-6 col-md-push-6 mb-4  center-block">
+              <img src="assets/img/demo/mock.png" alt="" class="img-responsive center-block wow zoomIn animation-delay-12 "/> </div>
+            <div class="col-md-6 col-md-pull-6 pr-6">
+              <p class="wow fadeInLeft animation-delay-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint officiis odio tempora natus, sed voluptas facilis ullam suscipit. Ducimus quas, eius ut, dolores mollitia sapiente doloremque aliquid sequi eaque.</p>
+              <p class="wow fadeInLeft animation-delay-7">Adipisicing elit. Sapiente porro voluptatem rerum modi quibusdam accusantium nihil facere cupiditate quam! Ipsa.</p>
+              <p class="wow fadeInLeft animation-delay-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi voluptatem, similique corrupti necessitatibus nihil error, nemo delectus voluptates deserunt ducimus quaerat molestiae labore id repellat exercitationem asperiores neque
+                quibusdam.</p>
+              <div class="text-center">
+                <a href="javascript:void(0)" class="btn btn-warning btn-raised mr-1 wow flipInX animation-delay-14">
+                  <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                <a href="javascript:void(0)" class="btn btn-info btn-raised wow flipInX animation-delay-16">
+                  <i class="zmdi zmdi-case"></i> Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-6">
+        <h1 class="font-light">Technology that brings teams together</h1>
+        <p class="lead color-primary">— Intelligent apps that help you do your best work. </p>
+        <div class="panel panel-light panel-flat">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs nav-tabs-transparent indicator-primary nav-tabs-full nav-tabs-5" role="tablist">
+            <li class="wow fadeInDown animation-delay-6" role="presentation">
+              <a href="#windows" aria-controls="windows" role="tab" data-toggle="tab" class="withoutripple">
+                <i class="zmdi zmdi-windows"></i>
+                <span class="hidden-xs">Windows</span>
+              </a>
+            </li>
+            <li class="wow fadeInDown animation-delay-4 active" role="presentation">
+              <a href="#macos" aria-controls="macos" role="tab" data-toggle="tab" class="withoutripple">
+                <i class="zmdi zmdi-apple"></i>
+                <span class="hidden-xs">MacOS</span>
+              </a>
+            </li>
+            <li class="wow fadeInDown animation-delay-2" role="presentation">
+              <a href="#linux" aria-controls="linux" role="tab" data-toggle="tab" class="withoutripple">
+                <i class="fa fa-linux"></i>
+                <span class="hidden-xs">Linux</span>
+              </a>
+            </li>
+            <li class="wow fadeInDown animation-delay-4" role="presentation">
+              <a href="#android" aria-controls="android" role="tab" data-toggle="tab" class="withoutripple">
+                <i class="zmdi zmdi-android"></i>
+                <span class="hidden-xs">Android</span>
+              </a>
+            </li>
+            <li class="wow fadeInDown animation-delay-6" role="presentation">
+              <a href="#ios" aria-controls="ios" role="tab" data-toggle="tab" class="withoutripple">
+                <i class="zmdi zmdi-smartphone-iphone"></i>
+                <span class="hidden-xs">IOS</span>
+              </a>
+            </li>
+          </ul>
+          <div class="panel-body">
+            <!-- Tab panes -->
+            <div class="tab-content mt-4">
+              <div role="tabpanel" class="tab-pane fade" id="windows">
+                <div class="row">
+                  <div class="col-md-6 col-md-push-6">
+                    <img src="assets/img/demo/mock4.png" alt="" class="img-responsive animated zoomIn animation-delay-8"/> </div>
+                  <div class="col-md-6 col-md-pull-6">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane active in fade" id="macos">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/img/demo/mock2.png" alt="" class="img-responsive wow animated zoomIn animation-delay-8"/> </div>
+                  <div class="col-md-6">
+                    <h3 class="text-normal wow animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md  wow animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md wow animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised wow animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 wow animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="linux">
+                <div class="row">
+                  <div class="col-md-6 col-md-push-6">
+                    <img src="assets/img/demo/mock5.png" alt="" class="img-responsive animated zoomIn animation-delay-8"/> </div>
+                  <div class="col-md-6 col-md-pull-6">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="android">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/img/demo/mock6.png" alt="" class="img-responsive animated zoomIn animation-delay-8"/> </div>
+                  <div class="col-md-6">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md  animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="ios">
+                <div class="row">
+                  <div class="col-md-6 col-md-push-6">
+                    <img src="assets/img/demo/mock3.png" alt="" class="img-responsive animated zoomIn animation-delay-8"/> </div>
+                  <div class="col-md-6 col-md-pull-6">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- panel -->
+      </div>
+      <!-- container -->
+      <div class="container mt-6">
+        <div class="text-center mb-4">
+          <h2 class="uppercase color-primary">See our subscription plans</h2>
+          <p class="lead uppercase">Surprise with our unique features</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 price-table price-table-info wow zoomInUp animation-delay-2">
+            <header class="price-table-header">
+              <span class="price-table-category">Personal</span>
+              <h3>
+                <sup>$</sup>19.99
+                <sub>/mo.</sub>
+              </h3>
+            </header>
+            <div class="price-table-body">
+              <ul class="price-table-list">
+                <li>
+                  <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
+                <li>
+                  <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem. Dolor.</li>
+                <li>
+                  <i class="zmdi zmdi-settings"></i> Dignissimos velit reiciendis cumque.</li>
+                <li>
+                  <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
+                <li>
+                  <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+              </ul>
+              <div class="text-center">
+                <a href="javascript:void(0)" class="btn btn-info btn-raised">
+                  <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 price-table price-table-success prominent wow zoomInDown animation-delay-2">
+            <header class="price-table-header">
+              <span class="price-table-category">Professional</span>
+              <h3>
+                <sup>$</sup>49.99
+                <sub>/mo.</sub>
+              </h3>
+            </header>
+            <div class="price-table-body">
+              <ul class="price-table-list">
+                <li>
+                  <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
+                <li>
+                  <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem. Dolor.</li>
+                <li>
+                  <i class="zmdi zmdi-settings"></i> Dignissimos velit reiciendis cumque.</li>
+                <li>
+                  <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
+                <li>
+                  <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+              </ul>
+              <div class="text-center">
+                <a href="javascript:void(0)" class="btn btn-success btn-raised">
+                  <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 price-table price-table-warning wow zoomInUp animation-delay-2">
+            <header class="price-table-header">
+              <span class="price-table-category">Business</span>
+              <h3>
+                <sup>$</sup>99.99
+                <sub>/mo.</sub>
+              </h3>
+            </header>
+            <div class="price-table-body">
+              <ul class="price-table-list">
+                <li>
+                  <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
+                <li>
+                  <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem. Dolor.</li>
+                <li>
+                  <i class="zmdi zmdi-settings"></i> Dignissimos velit reiciendis cumque.</li>
+                <li>
+                  <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
+                <li>
+                  <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+              </ul>
+              <div class="text-center">
+                <a href="javascript:void(0)" class="btn btn-warning btn-raised">
+                  <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--container -->
+      <div class="wrap wrap-danger mt-6">
+        <h2 class="text-center no-m">What our customers say</h2>
+        <div id="carousel-example-generic" class="carousel carousel-cards carousel-fade slide" data-ride="carousel" data-interval="7000">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-2">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-3">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-4">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-2">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-3">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-4">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-2">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-3">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card animated flipInX animation-delay-4">
+                        <blockquote class="blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar hidden-xs"/>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="prev">
+            <i class="zmdi zmdi-arrow-left"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="zmdi zmdi-arrow-right"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="container mt-6">
+        <h2 class="text-center color-primary mb-4">Our Latest Works</h2>
+        <div class="owl-dots"></div>
+        <div class="owl-carousel owl-theme">
+          <div class="card animation-delay-6">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port4.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card card-dark-inverse animation-delay-8">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port24.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-info btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-10">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port7.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-6">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port8.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card card-dark-inverse animation-delay-8">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port9.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-info btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-10">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port5.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-6">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port11.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card card-dark-inverse animation-delay-8">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port3.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-info btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-10">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port14.jpg" alt="..." class="img-responsive"/>
+              </a>
+            </div>
+            <div class="card-block">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="ms-footbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 ms-footer-col">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Sitemap</h3>
+                <ul class="list-unstyled ms-icon-list three_cols">
+                  <li>
+                    <a href="index.html">
+                      <i class="zmdi zmdi-home"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="page-blog.html">
+                      <i class="zmdi zmdi-edit"></i> Blog</a>
+                  </li>
+                  <li>
+                    <a href="page-blog.html">
+                      <i class="zmdi zmdi-image-o"></i> Portafolio</a>
+                  </li>
+                  <li>
+                    <a href="portfolio-filters_sidebar.html">
+                      <i class="zmdi zmdi-case"></i> Works</a>
+                  </li>
+                  <li>
+                    <a href="page-timeline_left2.html">
+                      <i class="zmdi zmdi-time"></i> Timeline</a>
+                  </li>
+                  <li>
+                    <a href="page-pricing.html">
+                      <i class="zmdi zmdi-money"></i> Pricing</a>
+                  </li>
+                  <li>
+                    <a href="page-about.html">
+                      <i class="zmdi zmdi-favorite-outline"></i> About Us</a>
+                  </li>
+                  <li>
+                    <a href="page-team2.html">
+                      <i class="zmdi zmdi-accounts"></i> Our Team</a>
+                  </li>
+                  <li>
+                    <a href="page-services.html">
+                      <i class="zmdi zmdi-face"></i> Services</a>
+                  </li>
+                  <li>
+                    <a href="page-faq2.html">
+                      <i class="zmdi zmdi-help"></i> FAQ</a>
+                  </li>
+                  <li>
+                    <a href="page-login2.html">
+                      <i class="zmdi zmdi-lock"></i> Login</a>
+                  </li>
+                  <li>
+                    <a href="page-contact.html">
+                      <i class="zmdi zmdi-email"></i> Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Subscribe</h3>
+                <p class="">Lorem ipsum Amet fugiat elit nisi anim mollit minim labore ut esse Duis ullamco ad dolor veniam velit.</p>
+                <form>
+                  <div class="form-group label-floating mt-2 mb-1">
+                    <div class="input-group ms-input-subscribe">
+                      <label class="control-label" for="ms-subscribe">
+                        <i class="zmdi zmdi-email"></i> Email Adress</label>
+                      <input type="email" id="ms-subscribe" class="form-control"/> </div>
+                  </div>
+                  <button class="ms-subscribre-btn" type="button">Subscribe</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-alt-color">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title text-center mb-2">Last Articles</h3>
+                <div class="ms-footer-media">
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."/> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Lorem ipsum dolor sit expedita cumque amet consectetur adipisicing repellat</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Design</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."/> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Labore ut esse Duis consectetur expedita cumque ullamco ad dolor veniam velit</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">News</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."/> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">voluptates deserunt ducimus expedita cumque quaerat molestiae labore</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Productivity</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 ms-footer-col ms-footer-text-right">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title">
+                  <span class="ms-logo ms-logo-white ms-logo-sm mr-1">M</span>
+                  <h3 class="no-m ms-site-title">Material
+                    <span>Style</span>
+                  </h3>
+                </div>
+                <address class="no-mb">
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> 795 Folsom Ave, Suite 600</p>
+                  <p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> San Francisco, CA 94107</p>
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    <a href="mailto:joe@example.com">example@domain.com</a>
+                  </p>
+                  <p>
+                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+34 123 456 7890 </p>
+                  <p>
+                    <i class="color-success-light fa fa-fax mr-1"></i>+34 123 456 7890 </p>
+                </address>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Social Media</h3>
+                <div class="ms-footbar-social">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-youtube">
+                    <i class="zmdi zmdi-youtube"></i>
+                  </a>
+                  <br/>
+                  <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-instagram">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-github">
+                    <i class="zmdi zmdi-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright &copy; Material Style 2017</p>
+        </div>
+      </footer>
+      <div class="btn-back-top">
+        <a href="#" data-scroll="" id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+          <i class="zmdi zmdi-long-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+    <!-- sb-site-container -->
+    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+      <div class="sb-slidebar-container">
+        <header class="ms-slidebar-header">
+          <div class="ms-slidebar-login">
+            <a href="javascript:void(0)" class="withripple">
+              <i class="zmdi zmdi-account"></i> Login</a>
+            <a href="javascript:void(0)" class="withripple">
+              <i class="zmdi zmdi-account-add"></i> Register</a>
+          </div>
+          <div class="ms-slidebar-title">
+            <form class="search-form">
+              <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+              <label for="search-box-slidebar">
+                <i class="zmdi zmdi-search"></i>
+              </label>
+            </form>
+            <div class="ms-slidebar-t">
+              <span class="ms-logo ms-logo-sm">M</span>
+              <h3>Material
+                <span>Style</span>
+              </h3>
+            </div>
+          </div>
+        </header>
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+          <li class="panel" role="tab" id="sch1">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc1" aria-expanded="false" aria-controls="sc1">
+              <i class="zmdi zmdi-home"></i> Home </a>
+            <ul id="sc1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch1">
+              <li>
+                <a href="index.html">Default Home</a>
+              </li>
+              <li>
+                <a href="home-generic-2.html">Home Black Slider</a>
+              </li>
+              <li>
+                <a href="home-landing.html">Home Landing Intro</a>
+              </li>
+              <li>
+                <a href="home-landing3.html">Home Landing Video</a>
+              </li>
+              <li>
+                <a href="home-shop.html">Home Shop 1</a>
+              </li>
+            </ul>
+          </li>
+          <li class="panel" role="tab" id="sch2">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc2" aria-expanded="false" aria-controls="sc2">
+              <i class="zmdi zmdi-desktop-mac"></i> Pages </a>
+            <ul id="sc2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch2">
+              <li>
+                <a href="page-about.html">About US</a>
+              </li>
+              <li>
+                <a href="page-team.html">Our Team</a>
+              </li>
+              <li>
+                <a href="page-product.html">Products</a>
+              </li>
+              <li>
+                <a href="page-services.html">Services</a>
+              </li>
+              <li>
+                <a href="page-faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="page-timeline_left.html">Timeline</a>
+              </li>
+              <li>
+                <a href="page-contact.html">Contact Option</a>
+              </li>
+              <li>
+                <a href="page-login.html">Login</a>
+              </li>
+              <li>
+                <a href="page-pricing.html">Pricing</a>
+              </li>
+              <li>
+                <a href="page-coming.html">Coming Soon</a>
+              </li>
+            </ul>
+          </li>
+          <li class="panel" role="tab" id="sch4">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc4" aria-expanded="false" aria-controls="sc4">
+              <i class="zmdi zmdi-edit"></i> Blog </a>
+            <ul id="sc4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch4">
+              <li>
+                <a href="blog-sidebar.html">Blog Sidebar 1</a>
+              </li>
+              <li>
+                <a href="blog-sidebar2.html">Blog Sidebar 2</a>
+              </li>
+              <li>
+                <a href="blog-masonry.html">Blog Masonry 1</a>
+              </li>
+              <li>
+                <a href="blog-masonry2.html">Blog Masonry 2</a>
+              </li>
+              <li>
+                <a href="blog-full.html">Blog Full Page 1</a>
+              </li>
+              <li>
+                <a href="blog-full2.html">Blog Full Page 2</a>
+              </li>
+              <li>
+                <a href="blog-post.html">Blog Post 1</a>
+              </li>
+              <li>
+                <a href="blog-post2.html">Blog Post 2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="panel" role="tab" id="sch5">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc5" aria-expanded="false" aria-controls="sc5">
+              <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
+            <ul id="sc5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch5">
+              <li>
+                <a href="ecommerce-filters.html">E-Commerce Sidebar</a>
+              </li>
+              <li>
+                <a href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a>
+              </li>
+              <li>
+                <a href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a>
+              </li>
+              <li>
+                <a href="ecommerce-item.html">E-Commerce Item</a>
+              </li>
+              <li>
+                <a href="ecommerce-cart.html">E-Commerce Cart</a>
+              </li>
+            </ul>
+          </li>
+          <li class="panel" role="tab" id="sch6">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc6" aria-expanded="false" aria-controls="sc6">
+              <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
+            <ul id="sc6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch6">
+              <li>
+                <a href="portfolio-filters_sidebar.html">Portfolio Sidebar Filters</a>
+              </li>
+              <li>
+                <a href="portfolio-filters_topbar.html">Portfolio Topbar Filters</a>
+              </li>
+              <li>
+                <a href="portfolio-filters_sidebar_fluid.html">Portfolio Sidebar Fluid</a>
+              </li>
+              <li>
+                <a href="portfolio-filters_topbar_fluid.html">Portfolio Topbar Fluid</a>
+              </li>
+              <li>
+                <a href="portfolio-cards.html">Porfolio Cards</a>
+              </li>
+              <li>
+                <a href="portfolio-masonry.html">Porfolio Masonry</a>
+              </li>
+              <li>
+                <a href="portfolio-item.html">Portfolio Item 1</a>
+              </li>
+              <li>
+                <a href="portfolio-item2.html">Portfolio Item 2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="link" href="component-typography.html">
+              <i class="zmdi zmdi-view-compact"></i> UI Elements</a>
+          </li>
+          <li>
+            <a class="link" href="page-all.html">
+              <i class="zmdi zmdi-link"></i> All Pages</a>
+          </li>
+        </ul>
+        <div class="ms-slidebar-social ms-slidebar-block">
+          <h4 class="ms-slidebar-block-title">Social Links</h4>
+          <div class="ms-slidebar-social">
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
+              <i class="zmdi zmdi-facebook"></i>
+              <span class="badge badge-pink">12</span>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
+              <i class="zmdi zmdi-twitter"></i>
+              <span class="badge badge-pink">4</span>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
+              <i class="zmdi zmdi-google"></i>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
+              <i class="zmdi zmdi-instagram"></i>
+              <div class="ripple-container"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
