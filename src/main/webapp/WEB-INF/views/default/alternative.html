@@ -1,0 +1,78 @@
+<th:block th:fragment="alternative">
+<nav class="navbar ms-lead-navbar navbar-mode" id="navbar-lead">
+        <div class="container container-full">
+          
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/logo-header.png" alt="BloWMind WebMakers"/>
+            </a>
+          
+          <div id="navbar" class="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+               	<a href="/about">Quem somos</a>
+              </li>
+              <li class="dropdown">
+               <a href="#" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Software House
+                  <i class="zmdi zmdi-chevron-down"></i>
+               </a>
+                <ul class="dropdown-menu dropdown-megamenu animated fadeIn animated-2x">
+               		<li>
+	                  <a href="/knowledge">
+	                    <i class="glyphicon glyphicon-education"></i> Conhecimento distribuído</a>
+	                </li>
+	                <li>
+	                  <a href="/development">
+	                    <i class="glyphicon glyphicon-flash"></i> Desenvolvimento ágil</a>
+	                </li>
+               	</ul>
+               	</li>
+              <li class="dropdown">
+               <a href="#" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Soluções
+                  <i class="zmdi zmdi-chevron-down"></i>
+               </a>
+                <ul class="dropdown-menu dropdown-megamenu animated fadeIn animated-2x">     
+                	<li>
+                       <a href="/otrs">
+                        <i class="fa fa-ticket"></i> Gestão de processos e ticket</a>
+                    </li>
+                    <li>
+                        <a href="/asterisk">
+                         <i class="glyphicon glyphicon-earphone"></i> Soluções em telecom</a>
+                    </li>
+                    <li>
+                         <a href="/cloud">
+                         <i class="glyphicon glyphicon-cloud"></i> Cloud Computing</a>
+                     </li>
+                     <li>
+                         <a href="/omnichannel">
+                         <i class="fa fa-handshake-o"></i> Omnichannel</a>
+                     </li>
+                     <li>
+                         <a href="/integration">
+                         <i class="glyphicon glyphicon-link"></i> Integração de sistemas</a>
+                     </li>
+                   </ul>
+                 </li>
+              <li>
+               	<a href="/contact">Contato</a>
+              </li>
+              <li>
+               	<a href="/recruit">Trabalhe conosco</a>
+              </li>
+              <li>
+              	<li>
+		            <a href="javascript:void(0)" id="login" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal">
+		              <i class="zmdi zmdi-account"></i>
+		            </a>
+		             <div th:if="${param.error}">
+		           		<li><span style="float:left;" th:text="#{labels.menu.errormessage}"></span></li>
+		        	</div>
+                 </li>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <!-- container -->
+      </nav>
+     </th:block>

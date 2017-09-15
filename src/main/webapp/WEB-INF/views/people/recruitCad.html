@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>BloWMind | Painel</title>
+
+   
+    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+    <!-- Toastr style -->
+    <link href="../../css/plugins/toastr/toastr.min.css" rel="stylesheet"/>
+    
+    <!-- FooTable -->
+    <link href="../../css/plugins/footable/footable.core.css" rel="stylesheet"/>
+
+    <!-- Gritter -->
+    <link href="../../js/plugins/gritter/jquery.gritter.css" rel="stylesheet"/>
+
+    <link href="../../css/animate.css" rel="stylesheet"/>
+    <link href="../../css/style.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <!-- Menu left-->
+      	<th:block th:replace="/panel/leftMenu :: leftMenu"/>
+      	
+      	<div id="page-wrapper" class="gray-bg">
+      	<!-- panel header-->
+      	<th:block th:replace="/panel/header :: header"/>
+      	
+      		
+      	<div class="wrapper wrapper-content  animated fadeInRight">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h2>Curriculos do site</h2>
+                            <div class="input-group">
+                                <input type="text" placeholder="Procurar cadastro " class="input form-control"/>
+                                <span class="input-group-btn">
+                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Procurar</button>
+                                </span>
+                            </div>
+                            <div class="clients-list">
+                            <ul class="nav nav-tabs">
+                                <span class="pull-right small text-muted" th:text="${#lists.size(allRecruit)} + ' curriculo(s) cadastrado'"></span>
+                                <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> Cadastrados</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="footable table table-stripped toggle-arrow-tiny">
+                                            <thead>
+				                                <tr>
+				                                    <th data-toggle="true">Nome</th>
+				                                    <th>Email</th>
+				                                    <th>Tefone</th>
+				                                    <th>Cargo</th>
+				                                    <th>Curriculo</th>
+				                                    <th>Situação</th>
+				                                    <th data-hide="all">Obs</th>
+				                                </tr>
+				                                </thead>
+                                                <tbody th:each="allRecruit, status : ${allRecruit}">
+                                                <tr>
+                                                    <td><span th:text="${allRecruit.name}"></span></td>
+                                                    <td> <span th:text="${allRecruit.email}"></span>&nbsp;<i class="fa fa-envelope"></i></td>
+                                                    <td> <span th:text="${allRecruit.telephone}"></span></td>
+                                                    <td> <span th:text="${allRecruit.position}"></span></td>
+                                                    <td> <a target="_blank" th:href="'/curriculo/' + ${allRecruit.file}" class="client-link"><span th:text="${allRecruit.file}"></span></a></td>
+                                                    <td class="client-status">
+                                                    	<span th:classappend="${allRecruit.status} == Novo ? label-primary : label-danger" class="label">
+                                                    		<span th:text="${allRecruit.status} == Novo ? Novo : Visto">Ativo</span>
+                                                    	</span>
+                                                    </td>
+                                                    <td> <span th:text="${allRecruit.text}"></span></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <!-- small chat-->
+      	<th:block th:replace="/panel/smallChat :: smallChat"/>
+        
+    </div>
+	</div>
+    <!-- Mainly scripts -->
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    
+    <!-- FooTable -->
+    <script src="../../js/plugins/footable/footable.all.min.js"></script>
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="../../js/inspinia.js"></script>
+    <script src="../../js/plugins/pace/pace.min.js"></script>
+
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+
+        });
+
+    </script>
+</body>
+</html>

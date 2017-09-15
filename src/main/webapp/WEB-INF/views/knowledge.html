@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#333"/>
+	     <title>BloWMind</title>
+    <meta name="description" content="BloWMind Web Makers"/>
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled=""/>
+    <link rel="stylesheet" href="assets/css/style.light-blue-500.min.css" />
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+   
+      <!-- Modal login-->
+      <th:block th:replace="/default/loginModal :: loginModal"/>
+      <!-- header -->
+      <th:block th:replace="/default/alternative :: alternative"/>
+          
+      <div class="container">
+        <div class="container pt-6">
+            <h2 class="right-line">Conhecimento distribuído</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="color-primary wow fadeInUp animation-delay-2">A qualquer hora</h3>
+                <p class="wow fadeInUp animation-delay-2">O <strong>Desenvolvimento distribuído de software</strong> tem se apresentado nos últimos anos como uma alternativa para o
+					desenvolvimento de software. É um fenômeno que vem crescendo desde a última
+					década, onde se observou um grande investimento na conversão de mercados nacionais
+					em mercados globais, criando novas formas de competição e colaboração.
+					É cada vez mais significativo o número de empresas que estão distribuindo os processos de desenvolvimento de software ao redor do mundo, visando
+					ganhos de produtividade, redução de custos e melhorias na qualidade.
+                  </p>
+                
+                 <img src="assets/img/knowledge.png" alt="..."/>
+              </div>
+              <div class="col-md-6">
+                	<div class="thumbnail">
+                        <img src="assets/img/knowledge.jpg" alt="..."/>
+                        <div class="caption">
+                          <h3 class="color-primary">Em qualquer lugar</h3>
+                          <p>O <strong>Desenvolvimento distribuído de software</strong> vem criando novas formas de cooperação e competição que vão além das fronteiras das empresas
+                          	fazendo cada vez mais dificil justificar o desenvolvimento tradicional de software centralizado em uma organização.</p>
+                          <p>Com a possibilidade de contar com recursos disponíveis 24/7, e com a atual sofisticação dos meios de comunicação, tem incentivado um investimento maciço 
+                          	neste meio.</p>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+      
+	<!-- footer -->
+    <th:block th:replace="/default/footer :: footer"/>
+    
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

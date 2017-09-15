@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#333"/>
+	     <title>BloWMind</title>
+    <meta name="description" content="BloWMind Web Makers"/>
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled=""/>
+    <link rel="stylesheet" href="assets/css/style.light-blue-500.min.css" />
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+   
+      <!-- Modal login-->
+      <th:block th:replace="/default/loginModal :: loginModal"/>
+      <!-- header -->
+      <th:block th:replace="/default/alternative :: alternative"/>
+	  <br/><br/><br/><br/><br/><br/>
+	  
+          
+      <div class="container">
+        <div class="card card-hero animated slideInUp animation-delay-8 mb-6">
+          <div class="card-block">
+            <h2 class="color-primary">Sobre nós</h2>
+            <div class="row">
+              <div class="col-md-6 text-justify">
+                <p class="dropcaps">Somos uma empresa jovem, nos fortalecemos dos desafios e acordamos a cada dia mais inpirados. Nos tratamos como iguais, sempre respeitando as diversidades e o ambiente que nos proporciona oportunidades, crescemos com as dificuldades e aprendemos 
+                a cada dia a superar os limites para que possamos cumprir nossa missão e atingir nosso objetivo.</p>
+               
+              </div>
+              <div class="col-md-6 text-justify">
+                <p>Nos apoiamos em nossos valores como pilares do nosso sucesso, e esperamos cada dia mais poder servir, atender, criar e inspirar a cada um que de alguma é colocado em nosso caminho. Caminhamos juntos, apesar da separação física, e dedicamos parte de nossas vidas a mudar quem somos e o nosso redor para melhor.</p>
+               
+              </div>
+            </div>
+            <hr class="dotted"/>
+            <div class="row">
+              <div class="col-lg-3 col-sm-6">
+                <div class="card card-info card-flat">
+                  <div class="card-block text-center">
+                    <i class="glyphicon glyphicon-king color-info font-big"></i>
+                    <h4 class="color-info">Missão</h4>
+                    <p>Gerar contentamento, inspiração, resultados e paixão oferencendo o que temos de melhor.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card card-warning card-flat">
+                  <div class="card-block text-center">
+                    <i class="glyphicon glyphicon-road color-warning font-big"></i>
+                    <h4 class="color-warning">Objetivos</h4>
+                    <p>Chegar ao fim de cada desafio com o sentimento de dever cumprido da melhor forma possível.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card card-danger card-flat">
+                  <div class="card-block text-center">
+                    <i class="glyphicon glyphicon-heart color-danger font-big"></i>
+                    <h4 class="color-danger">Valores</h4>
+                    <p>Comprometimento, Transparencia, Integridade, Confiança, Espirito de equipe e Evolução humana.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card card-success card-flat">
+                  <div class="card-block text-center">
+                    <i class="zmdi zmdi-nature-people color-success font-big"></i>
+                    <h4 class="color-success">Pessoas</h4>
+                    <p>Os pilares para que todos os ítens anteriores possam ser cumpridos, valorização e crescimento.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+	<!-- footer -->
+    <th:block th:replace="/default/footer :: footer"/>
+    
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#333"/>
+	     <title>BloWMind</title>
+    <meta name="description" content="BloWMind Web Makers"/>
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled=""/>
+    <link rel="stylesheet" href="assets/css/style.light-blue-500.min.css" />
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+   
+      <!-- Modal login-->
+      <th:block th:replace="/default/loginModal :: loginModal"/>
+      <!-- header -->
+      <th:block th:replace="/default/alternative :: alternative"/>
+	  <br/><br/><br/>
+          
+      <div class="container">
+ 			<div class="row">
+               <div class="col-xs-12">
+                 <div class="card card-primary">
+                   <div class="row">
+                     <div class="col-lg-6">
+                       <div class="card-block">
+                         <img src="assets/img/omnichanel.png" alt="" class="img-responsive"/> </div>
+                     </div>
+                     <div class="col-lg-6">
+                     <div class="card-block">
+                         <h4 class="color-royal">Omnichannel</h4>
+                         <p>Omnichannel é uma tendência do varejo que se baseia na convergência de todos os canais utilizados por uma empresa. Trata-se da possibilidade de fazer com que o consumidor não veja diferença entre o mundo online e o offline.
+                        </p>
+                        <p>O conceito de Omnichannel vai além de simplesmente estar presente em todos os canais de venda ou comunicação, não nos esqueçamos que omni significa “TUDO” e todo o processo de compra é executado por uma única entidade, o cliente. Portanto, chegamos ao ponto focal de omnichannel, e que não é representada pelos outros conceitos: <strong>a experiência do cliente.</strong> </p>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="col-lg-6 col-lg-push-6">
+                       <div class="card-block">
+                         <img src="assets/img/omnichannel-tools.png" alt="" class="img-responsive"/> </div>
+                     </div>
+                     <div class="col-lg-6 col-lg-pull-6">
+                       <div class="card-block">
+                         <h4 class="color-warning">Quanto mais presente você estiver, maior chances de sucesso</h4>
+                         <p>Entender e influenciar o comportamento dos clientes, por meio de processos, ações e comunicações significativas, buscando melhorar as compras, fidelizar e aumentar a lucratividade, são algumas das funções das ferramentas de CRM (Customer Relationship Management).
+							Por meio da identificação dos clientes de forma individual e nominal, é possível criar um relacionamento entre a empresa e o consumidor. Por isso, ter uma ferramenta que administre todas essas informações se torna de extrema importância para que essa relação seja interessante para as duas partes envolvidas – empresa e cliente.</p>
+						<p>Hoje, as empresas usufruem de diversos meios de comunicação com seus clientes, pelos quais o próprio consumidor pode iniciar o contato, por meio de e-mails, redes sociais, chats, sites, blogs, entre outros.
+
+E é nesse sentido que surgiu a visão do Omni Channel, que integra todos os pontos de contato da empresa – atendimento, vendas e marketing – , dando a ela uma visão única e integrada de seu cliente.</p>
+                         
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+      </div>
+      
+      
+	<!-- footer -->
+    <th:block th:replace="/default/footer :: footer"/>
+    
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

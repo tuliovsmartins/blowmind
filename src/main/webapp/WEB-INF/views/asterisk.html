@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#333"/>
+	     <title>BloWMind</title>
+    <meta name="description" content="BloWMind Web Makers"/>
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled=""/>
+    <link rel="stylesheet" href="assets/css/style.light-blue-500.min.css" />
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+   
+      <!-- Modal login-->
+      <th:block th:replace="/default/loginModal :: loginModal"/>
+      <!-- header -->
+      <th:block th:replace="/default/alternative :: alternative"/>
+	  <br/><br/><br/>
+          
+      	<div class="container">
+ 			<div class="row">
+               <div class="col-xs-12">
+                 <div class="card card-primary">
+                   <div class="row">
+                     <div class="col-lg-6">
+                       <div class="card-block">
+                         <img src="assets/img/telecom.png" alt="" class="img-responsive"/> </div>
+                     </div>
+                     <div class="col-lg-6">
+                     <div class="card-block">
+                         <h4 class="color-royal">Telecomunicações</h4>
+                         <p>Já é impraticável pensar em negócios sem mencionar tecnologia e ferramentas de telecomunicações, Telefones, smartphones, notebooks e tablets invadiram o espaço de trabalho tão rapidamente que as vezes nos sentimos perdidos 
+                         	em meio as possibilidades de melhorar as estratégias e custos das operações, A capacidade de reduzir gastos de forma inteligente e trabalhar dentro do orçamento possível é uma habilidade valorosa, portanto precisamos de 
+                         	ferramentas que nos possibilite a gestão transparente e exata de nossos custos com a área de telecom, e que tamém nos dê possibilidades de realizar tarefas de formas simples e eficientes. 
+                        </p>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="col-lg-6 col-lg-push-6">
+                       <div class="card-block">
+                         <img src="assets/img/asterisk.png" alt="" class="img-responsive"/> </div>
+                     </div>
+                     <div class="col-lg-6 col-lg-pull-6">
+                       <div class="card-block">
+                         <h4 class="color-warning">Ferramentas</h4>
+                         <p>O Asterisk é uma ferramenta robusta e escalável para que a comunicação da empresa esteja sempre a frente em termos de telecomunicações.</p>
+                         	Sua programação pode ser configurada para realizar das mais simples as mais completas tarefas de telefonica, integrando a outros sistemas, oferece enormes possibilidades para uma operação moderna e aderente.  
+                         <p>Dês de um simples serviço de PABX até complexas URAS de atendimento automatizado com possibilidade de gravação de ligações, transferencias, conferencias, filas de espera e muito mais, a plataforma open-source
+                         	Asterisk também tem o objetivo de reduzir os custos de telefonia com tecnologia VOIP e diminuir consideravelmente qualquer fenda entre o sucesso da operação e as telecomunicações.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+      </div>
+      
+      
+	<!-- footer -->
+    <th:block th:replace="/default/footer :: footer"/>
+    
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

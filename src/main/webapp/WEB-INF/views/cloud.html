@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#333"/>
+	     <title>BloWMind</title>
+    <meta name="description" content="BloWMind Web Makers"/>
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled=""/>
+    <link rel="stylesheet" href="assets/css/style.light-blue-500.min.css" />
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+   
+      <!-- Modal login-->
+      <th:block th:replace="/default/loginModal :: loginModal"/>
+      <!-- header -->
+      <th:block th:replace="/default/alternative :: alternative"/>
+	  <br/><br/><br/>
+          
+      <div class="container">
+ 			<div class="row">
+               <div class="col-xs-12">
+                 <div class="card card-primary">
+                   <div class="row">
+                     <div class="col-lg-6">
+                       <div class="card-block">
+                         <img src="assets/img/cloud-computing.png" alt="" class="img-responsive"/> </div>
+                     </div>
+                     <div class="col-lg-6">
+                     <div class="card-block">
+                         <h4 class="color-royal">Computação em núvem</h4>
+                         <p> 
+                         	Provavelmente você está usando computação em nuvem neste momento, mesmo sem perceber. Se você usa um serviço online para enviar email, editar documentos, ver filmes ou TV, ouvir música, jogar ou armazenar fotos e outros arquivos, é provável que a computação em nuvem esteja nos bastidores possibilitando tudo isso
+                        </p>
+                        <p>A computação em nuvem é uma grande mudança na forma tradicional que as empresas pensam em recursos de TI. A facilidade de acesso as principais funcionalidades e a não necessidade de manter um CPD ou data center dentro das organizações, são grande atrativo para o sucesso deste novo conceito de uso de infra-estrutura.</p>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="col-lg-6 col-lg-push-6">
+                       <div class="card-block">
+                         <img src="assets/img/cloud-computing-tools.png" alt="" class="img-responsive"/> </div>
+                     </div>
+                     <div class="col-lg-6 col-lg-pull-6">
+                       <div class="card-block">
+                         <h4 class="color-warning">Principais benefícios da computação em nuvem</h4>
+                         <p>Custo - A computação em nuvem elimina o gasto capital de compra de hardware e software e instalação e execução de datacenters locais </p>
+                         <p>Velocidade - A maior parte dos serviços de computação em nuvem é fornecida por autosserviço e sob demanda.</p>
+                         <p>Escala global - Os benefícios dos serviços de computação em nuvem incluem a capacidade de dimensionamento elástico, isso significa fornecer a quantidade correta de recursos de TI</p>
+                         <p>Desempenho - Os maiores serviços de computação em nuvem são executados em uma rede mundial de datacenters seguros, que são atualizados regularmente com a mais recente geração de hardware de computação rápido e eficiente.</p>
+                         <p>Confiabilidade - A computação em nuvem facilita e reduz os custos de backup de dados, recuperação de desastre e continuidade dos negócios, já que os dados podem ser espelhados em diversos sites redundantes na rede do provedor de nuvem.</p>
+                         
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+      </div>
+      
+      
+	<!-- footer -->
+    <th:block th:replace="/default/footer :: footer"/>
+    
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

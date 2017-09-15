@@ -1,0 +1,88 @@
+<th:block th:fragment="contact">		
+	<div class="container">	
+         <div class="row">
+          <div class="col-lg-8 col-md-7">
+            <div class="card card-primary animated fadeInUp animation-delay-7">
+              <div class="card-block">
+                <form class="form-horizontal" method="POST" enctype="multipart/form-data" th:object="${contactDataVM}">
+                 <div class="alert alert-primary alert-dismissible" th:text="${message}" th:if="${not #strings.isEmpty(message)}">
+				 </div>
+                  <fieldset>
+                  	<h4 class="color-primary text-center">Envie-nos uma mensagem</h4>
+                    <div class="form-group" th:classappend="${#fields.hasErrors('name')} ? has-error">
+                      <label for="inputName" class="col-md-2 control-label">Nome</label>
+                      <div class="col-md-9">
+                        <input type="text" th:field="*{name}" th:if="${contactDataVM}" th:value="${contactDataVM.name}" name="name" class="form-control" id="inputName" placeholder="Nome"/> 
+                         <p class="color-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">name Error</p></div>
+                    </div>
+                    <div class="form-group" th:classappend="${#fields.hasErrors('email')} ? has-error">
+                      <label for="inputEmail"  class="col-md-2 control-label">Email</label>
+                      <div class="col-md-9">
+                        <input type="email" name="email" th:field="*{email}" th:if="${contactDataVM}" th:value="${contactDataVM.email}" class="form-control" id="inputEmail" placeholder="Email"/> 
+                        <p class="color-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">email Error</p></div>
+                    </div>
+                    <div class="form-group" th:classappend="${#fields.hasErrors('telephone')} ? has-error">
+                      <label for="inputEmail" class="col-md-2 control-label">Telefone</label>
+                      <div class="col-md-9">
+                        <input type="text" name="telephone" th:field="*{telephone}" th:if="${contactDataVM}" th:value="${contactDataVM.telephone}" class="form-control" data-mask="(99) 99999-9999" placeholder="Telefone"/> 
+                        <p class="color-danger" th:if="${#fields.hasErrors('telephone')}" th:errors="*{telephone}">telephone Error</p></div>
+                    </div>
+                    <div class="form-group" th:classappend="${#fields.hasErrors('subject')} ? has-error">
+                      <label for="inputSubject" class="col-md-2 control-label">Assunto</label>
+                      <div class="col-md-9">
+                        <input type="text" name="subject" th:field="*{subject}" th:if="${contactDataVM}" th:value="${contactDataVM.subject}" class="form-control" id="inputSubject" placeholder="Assunto"/> 
+                        <p class="color-danger" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}">subject Error</p></div>
+                    </div>
+                    <div class="form-group" th:classappend="${#fields.hasErrors('message')} ? has-error">
+                      <label for="textArea" class="col-md-2 control-label">Mensagem</label>
+                      <div class="col-md-9">
+                        <textarea class="form-control" name="message" th:field="*{message}" th:if="${contactDataVM}" th:value="${contactDataVM.message}" rows="5" id="textArea" placeholder="Sua Mensagem..."></textarea>
+                        <p class="color-danger" th:if="${#fields.hasErrors('message')}" th:errors="*{message}">message Error</p>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-9 col-md-offset-2">
+                        <button type="submit" class="btn btn-raised btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-danger">Cancelar</button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-5">
+            <div class="card card-primary animated fadeInUp animation-delay-7">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="zmdi zmdi-pin"></i>Nosso endereço</h3>
+              </div>
+              <div class="card-block">
+                <address class="no-mb">
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Rua das Acácias, 358 - Cidade Jardim</p>
+                  <p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> Uberlândia - MG, Cep: 38.412-130</p>
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    contato@blowmindsolutions.com.br
+                  </p>
+                  <p>
+                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>(34) 3211-2846 </p>
+                  <p>
+                    <i class="color-success-light fa fa-fax mr-1"></i>(34) 99112-7338 </p>
+                </address>	
+              </div>
+             </div>
+            <div class="card card-primary animated fadeInUp animation-delay-7">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="zmdi zmdi-map"></i>Onde estamos</h3>
+              </div>
+              <iframe width="100%" height="340" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.653052362892!2d-48.29443488560298!3d-18.946745087162167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a444c3c4212883%3A0xe8726257381cc8e3!2sR.+das+Ac%C3%A1cias%2C+358+-+Cidade+Jardim%2C+Uberl%C3%A2ndia+-+MG%2C+38412-130!5e0!3m2!1spt-BR!2sbr!4v1503678950561"></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+      </div>
+  </th:block>
