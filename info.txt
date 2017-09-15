@@ -1,0 +1,16 @@
+User default Password
+$2a$10$w/uihlZfNhW1jL82eP2KeOLxQb0IZVdhJZmXHPkusjP5CZP9LrIIG
+
+Inserts user_menu
+
+INSERT INTO users_menu (id, main, ref, sub) VALUES (1, 1, 'adminUser', 'Administrar Usuários');
+INSERT INTO users_menu (id, main, ref, sub) VALUES (2, 1, 'createUser', 'Criar Usuário');
+INSERT INTO users_menu (id, main, ref, sub) VALUES (3, 2, 'recruitCad', 'Curriculos do site');
+INSERT INTO users_menu (id, main, ref, sub) VALUES (4, 2, 'resourceCad', 'Cadastrar Recurso');
+INSERT INTO users_menu (id, main, ref, sub) VALUES (5, 2, 'resourceAdmin', 'Administrar Recursos');
+
+
+Inserts main_menu
+
+INSERT INTO main_menu (id, icon, main) VALUES (1, 'fa fa-user', 'Usuários');
+INSERT INTO main_menu (id, icon, main) VALUES (2, 'fa fa-group', 'Recursos Humanos');
